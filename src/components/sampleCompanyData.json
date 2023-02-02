@@ -1,0 +1,73 @@
+{
+    "id": "f5bd77f4-f747-4468-ac02-c7e45ac32a14",
+    "legal_name": "Cisticola Worldwide LLC",
+    "ein": "12-3456116",
+    "entity": {
+        "type": "llc",
+        "subtype": null
+    },
+    "primary_email": "admin@cisticola.com",
+    "primary_phone_number": "4151234568",
+    "departments": [
+        {
+            "name": "West Coast",
+            "parent": null
+        },
+        {
+            "name": "East Coast",
+            "parent": null
+        },
+        {
+            "name": "Product",
+            "parent": {
+                "name": "West Coast"
+            }
+        },
+        {
+            "name": "Support",
+            "parent": {
+                "name": "East Coast"
+            }
+        },
+        {
+            "name": "GTM",
+            "parent": {
+                "name": "West Coast"
+            }
+        }
+    ],
+    "locations": [
+        {
+            "line1": "300 Post St",
+            "line2": null,
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US",
+            "postal_code": "94108"
+        },
+        {
+            "line1": "767 5th Ave",
+            "line2": "Suit 578",
+            "city": "New York",
+            "state": "NY",
+            "country": "US",
+            "postal_code": "10153"
+        }
+    ],
+    "accounts": [
+        {
+            "institution_name": "BANK OF AMERICA",
+            "account_name": "BofA Checking",
+            "account_type": "checking",
+            "account_number": "81573443",
+            "routing_number": "370562579"
+        },
+        {
+            "institution_name": "CHASE",
+            "account_name": "Chase Checking",
+            "account_type": "checking",
+            "account_number": "37469130",
+            "routing_number": "443220146"
+        }
+    ]
+}

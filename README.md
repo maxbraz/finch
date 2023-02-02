@@ -2,14 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## from the terminal inside this directory, run npm install to load the necessary dependencies
+## install dependencies
+from terminal navigate to the /client directory, run npm install
+navigate to the /server directory, run npm install
 
 ## start the server
-from withing the client directory, run npm start.  This should open a browser at http://localhost:3000/
+from withing the server directory, run node server.js
+output to terminal should read:
+    Server is running on port: 5000
+    Successfully connected to MongoDB
 
-## Available Scripts
-
-In the project directory, you can run:
+In the client directory, you can run:
 
 ### `npm start`
 
@@ -19,57 +22,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+From Finch
+Instructions:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create a web application in your favorite language that calls Finch’s Sandbox API to get an access token based on the user-selected provider.
+Use the access token to get the employer’s company information and the full employee directory and display both to the user.
+Upload your code to a public Github repository and send your interviewer the link when you are done. Instructions on how to run your code locally would be helpful.
+You can use Finch’s API documentation for help, but keep in mind that the API domain you will be using for this project is https://finch-sandbox-se-interview.vercel.app/.
+Requirements:
 
-### `npm run build`
+Your user interface should allow each individual employee from the directory to be selected and show the employee's personal and employment data.
+The access token should not be allowed to call the /payment or /pay-statement endpoint.
+Do not spend a long time building a beautiful user interface; simple is perfectly fine. However, you do need to display each field individually. You cannot simply display the JSON response via <pre>{JSON.stringify(<your-data>, null, 2}</pre> even though it is helpful initially for testing.
+A custom error message should be displayed in your application when a provider does not implement a certain endpoint.
+Questions that will be asked during your presentation:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+How does your application respond when the field returned by the provider is null?
+How does your application respond when a provider does not implement an endpoint?
+Where is your access token stored?
+Given more time, what would you want to do to make it better?
+[bonus points] Did you find the XSS vulnerability in the /api/sandbox/create endpoint?
